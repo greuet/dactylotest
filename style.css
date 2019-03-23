@@ -168,7 +168,6 @@ img {
 .txt {
   border:1px black solid;
   width:748px;
-  height:120px;
   font-family:monospace;
   font-size:14px;
   margin-bottom:5px;
@@ -177,7 +176,6 @@ img {
   height:auto;
   text-align:left;
   width:748px;
-  height:110px;
   font-family:monospace;
   font-size:14px;
   /*text-align:justify;*/

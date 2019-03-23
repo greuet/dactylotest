@@ -28,14 +28,14 @@ function new_text(a)
   // redimensionne les zones de texte et change le nombre de caractères à frapper
   if (document.getElementById("lang").value == "frlong")
   {
-    document.getElementById("rd_txt").style.height = "250px";
-    document.getElementById("txt").style.height = "240px";
+    document.getElementById("rd_txt").style.height = "320px";
+    document.getElementById("txt").style.height = "320px";
     nb_car = 1000;
   }
   else
   {
-    document.getElementById("rd_txt").style.height = "125px";
-    document.getElementById("txt").style.height = "120px";
+    document.getElementById("rd_txt").style.height = "185px";
+    document.getElementById("txt").style.height = "185px";
     nb_car = 500;
   }
 
