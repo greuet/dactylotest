@@ -25,6 +25,20 @@ function new_text(a)
   curseur_err_bol = false;
   val_result("reset");
 
+  // redimensionne les zones de texte et change le nombre de caractères à frapper
+  if (document.getElementById("lang").value == "frlong")
+  {
+    document.getElementById("rd_txt").style.height = "250px";
+    document.getElementById("txt").style.height = "240px";
+    nb_car = 1000;
+  }
+  else
+  {
+    document.getElementById("rd_txt").style.height = "125px";
+    document.getElementById("txt").style.height = "120px";
+    nb_car = 500;
+  }
+
   if(a=="new")
   {
     // requète javascript pour récupérer numéro###credit###texte
@@ -341,7 +355,6 @@ function aff_session(cps,mpm,precision,fl,mpm_top,lost_time_percent,lost_time,to
   document.getElementById("resultats").innerHTML = result;                      //on affiche
   document.getElementById("resultats").style.backgroundColor = "#202020";       //on colorise
   document.getElementById("resultats").style.border = "1px solid #c6c6c6";        //on met une bordure
-
 }
 
 //cette fonction permet de sauvegarder la totalité de la zone de résultats et de la restaurer ensuite si besoin
