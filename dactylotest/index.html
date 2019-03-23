@@ -19,14 +19,6 @@
 
 <body onkeyup="vidactyl(event)">
 
-<div class="bar" id="bar">
-  <a href="http://tazzon.free.fr/dactylotest/"><img src="../home.png" alt="home" style="padding-bottom:2px"/></a>
-  <a href="../dactylotest/" title="Testez votre vitesse de frappe">Dactylotest</a>
-  <a href="../tridactyl/" title="Perfectionnez votre frappe grâce aux trigrammes">Tridactyl</a>
-  <a href="../bepodactyl/" title="Bien débutez avec la disposition de clavier BÉPO">Bépodactyl</a>
-  <span style="color:#fafafa;float:right;padding-right:10px" id="welcome"></span>
-</div>
-
 <h1>— Dactylotest —</h1>
 
 <div class="main">
@@ -54,21 +46,25 @@
          <input type="button" onclick="load_ghost('list')" value="Liste des fantômes pour ce texte"/>
       </p>
       <br/>
+      <br/>
        Méthode&nbsp;: <select id="methode" onChange="this.blur()">
         <option value="rand">aléatoire </option>
         <option value="number">sélection </option>
       </select>
-      <br/>
+
        Langue&nbsp;&nbsp;: <select id="lang" onChange="this.blur()">
         <option value="fr">français </option>
         <option value="frlong">français long </option>
         <option value="en">anglais </option>
       </select>
-      <br/>
       <hr/>
     </div>
     <div class="options">
       <input type="button" onclick="this.value=view_options()" value="Afficher les options"/>
+      <div class="bar" id="bar">
+	<span id="welcome"></span>
+      </div>
+
       <div class="view_options" id="view_options">
         <p id="options">
           <input type="checkbox" onclick="options()" id="apo_typ" /> apostrophe typographique<br/>

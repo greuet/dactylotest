@@ -9,10 +9,7 @@ body {
 }
 
 .bar {
-  background-color:black;
-  width:99%;
-  padding:3px;
-  margin:auto;
+  width:auto;
 }
 
 a {

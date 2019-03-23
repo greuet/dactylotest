@@ -23,7 +23,7 @@ if (GetCookie("no_brk_spc") == "true")
 //  document.getElementById("nbspd").style.display = "none";
 if (GetCookie("no_brk_spc_display") == "true") document.getElementById("no_brk_spc_display").checked = true;
 if (GetCookie("quote_fr") == "true") document.getElementById("quote_fr").checked = true;
-if (GetCookie("name") != null) document.getElementById("welcome").innerHTML = "Bienvenue "+GetCookie("name");
+if (GetCookie("name") != null) document.getElementById("welcome").innerHTML = "[Connecté en tant que "+GetCookie("name")+"]";
 
 
 // http://www.javascripter.net/faq/operatin.htm
