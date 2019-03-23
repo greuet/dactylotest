@@ -1,5 +1,19 @@
 #!/bin/bash
-
+################################################################################
+#
+# Nettoyage de texte pour dactylotest
+#
+#  - met le texte sur une seule ligne
+#  - ajoute les espaces insécables avant les caractères doubles
+#  - transforme les ... en points de suspensions
+#  - transforme les ' en apostrophes typographiques
+#  - transforme les oe et ae en ligatures pour les noms commun du dictionnaires
+# 
+# Utilisation
+#  À exécuter dans un dossier où les textes à nettoyer sont chacuns dans un
+#  fichier .txt, la première ligne contenant le lien vers la source.
+# 
+################################################################################
 clean_file () {
     # première ligne = lien
     url=$(head -n 1 "$1")
