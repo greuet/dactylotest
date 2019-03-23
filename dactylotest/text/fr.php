@@ -124,7 +124,7 @@ $textes[28]["txt"] = "Seuls ceux qui portent sur la politique le regard scolasti
 
 
 $textes[29]["source"] = "https://blog.mondediplo.net/2012-11-21-Economistes-institutions-pouvoirs";
-$textes[29]["txt"] = "Sur un sujet à haute teneur polémique comme celui d’aujourd’hui, il est peut-être utile de ne pas céder immédiatement à l’envie (pourtant fort légitime) de la castagne et, au moins au début, de maintenir quelques exigences analytiques, conceptuelles même. Pour commencer donc, et dût la chose vous surprendre, voici ce que dit la proposition 12 de la partie III de l’Ethique : « L’esprit s’efforce autant qu’il le peut d’imaginer ce qui augmente la puissance d’agir de son corps. » La chose ne vous paraîtra sans doute pas aller de…";
+$textes[29]["txt"] = "Sur un sujet à haute teneur polémique comme celui d’aujourd’hui, il est peut-être utile de ne pas céder immédiatement à l’envie (pourtant fort légitime) de la castagne et, au moins au début, de maintenir quelques exigences analytiques, conceptuelles même. Pour commencer donc, et dût la chose vous surprendre, voici ce que dit la proposition 12 de la partie III de l’Éthique : « L’esprit s’efforce autant qu’il le peut d’imaginer ce qui augmente la puissance d’agir de son corps. » La chose ne vous paraîtra sans doute pas aller de…";
 
 
 $textes[30]["source"] = "https://blog.mondediplo.net/2014-02-26-Les-entreprises-ne-creent-pas-l-emploi";
