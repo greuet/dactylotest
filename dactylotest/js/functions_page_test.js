@@ -121,7 +121,7 @@ function options()
   for (var i=0 ; i<le_texte.length ; i++)
   {
     if (document.getElementById("no_brk_spc_display").checked == true && tt[i] == " ")
-      tt[i] = '<span style="background-color:#cccccc"><span id="car'+(i+1)+'">'+tt[i]+'</span></span>';
+      tt[i] = '<span style="background-color:#424242;height:1em"><span id="car'+(i+1)+'">'+tt[i]+'</span></span>';
     else
       tt[i] = '<span id="car'+(i+1)+'">'+tt[i]+'</span>';
   }

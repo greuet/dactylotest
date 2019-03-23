@@ -6,7 +6,7 @@ fichier de gestion des fantômes, lecture, création, chargement…
 var stop_ghost = false; // par défaut, le fantôme est prêt
 var posghost=0;
 var g=0;
-var cur_col_ghost = "#ffcfff";
+var cur_col_ghost = "#aa1d1d";
 var ghost = "";
 
 
@@ -326,4 +326,3 @@ function GetCookie(name) {
     }
 	return null;
 }
-		

@@ -1,5 +1,5 @@
 /*******************************************************************************
-Toutes les fonctions liées à la page pour le gestion des cadres des options, 
+Toutes les fonctions liées à la page pour le gestion des cadres des options,
 demande d'un nouveau texte…
 *******************************************************************************/
 
@@ -10,7 +10,7 @@ var le_texte_macosmod = "";                                                     
 var text_nb;
 var text_source;
 function new_text(a)
-{ 
+{
   //on réinitialise les variables
   lost_time = 0;
   nb_err = 0;
@@ -23,7 +23,7 @@ function new_text(a)
   stop_ghost = true;
   ghost_is_start = false;
   curseur_err_bol = false;
-  val_result("reset");  
+  val_result("reset");
 
   if(a=="new")
   {
@@ -33,17 +33,17 @@ function new_text(a)
     {
       var prompt_result = prompt("Indiquer ici le numéro du texte que vous souhaitez charger.",text_nb);
       if (prompt_result == null)
-        return; 
+	return;
       req += "&force="+prompt_result;
     }
     var req_text = request(req,"text_nmbr");
-    
+
     var reg = new RegExp("###","g");
     var t_get = req_text.split(reg);
     texte_en_cours = t_get[2];
     text_source = t_get[1];
     text_nb = t_get[0];
-    
+
     clean_ghost();
   }
 
@@ -51,15 +51,15 @@ function new_text(a)
   val=document.getElementById("txt").value;
 
   options();                                                                    //on passe par les options pour le mise en forme typographique et l'affichage du texte
-  
+
   document.getElementById("err").style.visibility = "hidden";                   //on cache le champ d'erreur (pas vraiment utile car on ne peut pas finir sur une erreur)
-  document.getElementById("txt").style.backgroundColor = "#f0fff0";             //on met le fond de la zone de frappe en vert
+  document.getElementById("txt").style.backgroundColor = "#202020";             //on met le fond de la zone de frappe un peu plus claire
   document.getElementById("d_replay").style.visibility = "hidden";              //on cache le bouton de replay
   document.getElementById("txt").readOnly = false;                              //et en écriture
   document.getElementById("resultats").innerHTML = "";                          //on efface les résultats de la session précédente
   document.getElementById("resultats").style.backgroundColor = "inherit";       //on met le fond en blanc
   document.getElementById("resultats").style.border = "none";                   //et sans bordure pour rendre le tout invisible
-  if (text_source.length > 45)
+  if (text_source.length > 120)
     var txt_link = text_source.substr(0,42)+"…";
   else
     var txt_link = text_source;
@@ -74,16 +74,16 @@ function MacOsMod(t)
 {
   var reg=new RegExp("[àèùÀÈÙ]", "g");
   t = t.replace(reg,"`");
-  
+
   var reg=new RegExp("[âêîôûÂÊÎÔÛ]", "g");
   t = t.replace(reg,"^");
-  
+
   var reg=new RegExp("[äëïöüÄËÏÖÜ]", "g");
   t = t.replace(reg,"¨");
-  
+
   var reg=new RegExp("[éÉ]", "g");
   t = t.replace(reg,"´");
-  
+
   return t;
 }
 
@@ -97,7 +97,7 @@ function options()
   {
     le_texte = le_texte.replace(/’/g,"'");
   }
-  
+
   //majuscules accentuées
   if (document.getElementById("maj_acc").checked == false)
   {
@@ -105,7 +105,7 @@ function options()
     le_texte = le_texte.replace(/À/g,"A");
     //on peut bien entendu en ajouter d'autres
   }
-  
+
   //ligatures æ, Æ, œ et Œ
   if (document.getElementById("ligat").checked == false)
   {
@@ -114,20 +114,20 @@ function options()
     le_texte = le_texte.replace(/æ/g,"ae");
     le_texte = le_texte.replace(/Æ/g,"Ae");
   }
-  
+
   //guillemets français « »
   if (document.getElementById("quote_fr").checked == false)
   {
     le_texte = le_texte.replace(/« /g,'"');
     le_texte = le_texte.replace(/ »/g,'"');
   }
-  
+
   //espaces insécables
   if (document.getElementById("no_brk_spc").checked == false)
   {
     le_texte = le_texte.replace(/ /g," ");
   }
-  
+
   //points de suspension
   if (document.getElementById("pds").checked == false)
     le_texte = le_texte.replace(/…/g,'...');
@@ -138,18 +138,18 @@ function options()
     le_texte = le_texte.replace(/–/g,'-');
     le_texte = le_texte.replace(/—/g,'-');
   }
-  
+
   // maintenant que toutes les options sont appliquées, on cré le texte compatible MacOs
   le_texte_macosmod = MacOsMod(le_texte);
 
   var tt = new Array;
   tt = le_texte.split("");                                                      //on split le texte pour récupérer tous les caractères indépendament
-  
+
   // on ajoute les espaces incécables en même temps qu'on englobe chaque caractères dans un span pour le curseur
   for (var i=0 ; i<le_texte.length ; i++)
   {
     if (document.getElementById("no_brk_spc_display").checked == true && tt[i] == " ")
-      tt[i] = '<span style="background-color:#cccccc"><span id="car'+(i+1)+'">'+tt[i]+'</span></span>';
+      tt[i] = '<span style="background-color:#424242"><span id="car'+(i+1)+'">'+tt[i]+'</span></span>';
     else
       tt[i] = '<span id="car'+(i+1)+'">'+tt[i]+'</span>';
   }
@@ -185,44 +185,44 @@ function calcul()
 
   for (var i=0;i<nb_car-1;i++)
   {
-    if (!isNaN(t_car[i+1]) && !isNaN(t_car[i]))    
+    if (!isNaN(t_car[i+1]) && !isNaN(t_car[i]))
       dt[i] = t_car[i+1]-t_car[i];                                              // on récupère les interval de temps entre chaque frappe
     else
     {
       if (isNaN(t_car[i]))
       {
-        dt[i] = t_car[i+1]-((t_car[i-1]+t_car[i+1])/2);                         // on récupère les interval de temps entre chaque frappe
+	dt[i] = t_car[i+1]-((t_car[i-1]+t_car[i+1])/2);                         // on récupère les interval de temps entre chaque frappe
       }
       else if (isNaN(t_car[i+1]))
       {
-        dt[i] = ((t_car[i]+t_car[i+2])/2)-t_car[i];                             // on récupère les interval de temps entre chaque frappe
+	dt[i] = ((t_car[i]+t_car[i+2])/2)-t_car[i];                             // on récupère les interval de temps entre chaque frappe
       }
     }
   }
-  
+
   // on calcul le temps entre le 1er et le dernier caractère tapé
   // la particularité c'est que quand on revient au premier pendant la frappe, le temps du caractère 0 (le premier en fait) est réinitialisé, on peut donc recommencé dans recharger de texte par exemple si on le souhaite
   var total_time = t_car[nb_car-1] - t_car[0];
-  
+
   //on calcul les différentes statistiques de la session
   var cps = Math.round(100000 * nb_car / total_time)/100;                       //coups par seconde
   var mpm = Math.round(cps * 600 / lettre_par_mot)/10;                          //mots par minute
   mpm_session = mpm;                                                            //on sauvegarde temporairement pour la donner au fantôme si on enregistre la session
   nb_err = err_test();
   var precision = Math.round(1000*(nb_car-nb_err)/nb_car)/10;                   //précision
-  
+
   //moyenne de la somme des fréquence de frappe
   //----------------------------------------------
-  var msf = 0;                                               
+  var msf = 0;
   for (var i=0 ; i<nb_car-1 ; i++)
   {
     msf = msf + 1 / (dt[i]/1000);
   }
-  msf = msf/(nb_car-1); 
+  msf = msf/(nb_car-1);
   var fl = Math.round(cps/msf*10000)/100;                                       // et la fluidité « fl » qui en découle
   //------------------------------------------------
 
-  // la vitesse (en mots par minute) qui aurait pu être atteinte sans les erreurs et le pourcentage de temps perdu 
+  // la vitesse (en mots par minute) qui aurait pu être atteinte sans les erreurs et le pourcentage de temps perdu
   var mpm_top = Math.round((1000 * nb_car / (total_time-lost_time))* 600 / lettre_par_mot)/10;
   var lost_time_percent = Math.round(1000*lost_time/total_time)/10;
 
@@ -231,13 +231,13 @@ function calcul()
     alert("lost_time"+lost_time);
     alert("lost_time_percent"+lost_time_percent);
   }
-  
+
   // le temps perdu et le temps total au format texte
   lost_time = form_time(new Date(lost_time));
   total_time = form_time(new Date(total_time));
-  
+
   // on lance l'affichage des statistiques de la session
-  aff_session(cps,mpm,precision,fl,mpm_top,lost_time_percent,lost_time,total_time); 
+  aff_session(cps,mpm,precision,fl,mpm_top,lost_time_percent,lost_time,total_time);
 }
 
 
@@ -246,14 +246,14 @@ function aff_session(cps,mpm,precision,fl,mpm_top,lost_time_percent,lost_time,to
 {
   var result = "";
   var nl = "<br/>";
-  
+
   // juste pour l'orthographe
-  //------------------------------------ 
+  //------------------------------------
   if (nb_fois_err >= 2)
     var txt1 = nb_fois_err+" erreurs";
   else
     var txt1 = nb_fois_err+" erreur";
-    
+
   if (nb_err >= 2)
     var txt2 = nb_err+" fautes";
   else
@@ -267,21 +267,21 @@ function aff_session(cps,mpm,precision,fl,mpm_top,lost_time_percent,lost_time,to
 
     //on complète la variable de résultats
     result +=  "Temps : "+ total_time +nl
-              //+"Vous avez fait "+txt1+" ("+txt2+" de frappe)."+nl
-              +"Vous avez fait "+txt2+" de frappe ("+txt1+")."+nl
-              +'Précision : <span id="precision_col" style="color:red"><strong>'+precision+' %</strong></span> :('+nl
-              +"Coups par seconde : "+cps+" ("+Math.round(cps*60)+" coups/min.)"+nl
-              //+'Mots par minute : <span title="Ce chiffre n’est coloré que pour représenter une vitesse à laquelle la frappe devient agréable — 50 mots par minute. Dès que vous atteindrez — ou dépasserez — cette vitesse régulièrement, vous aurez une grande aisance avec le clavier." id="mpm_col" style="color:orange"><strong>'+mpm+"</strong></span>"+nl;
-              +'Mots par minute : <span id="mpm_col" style="color:orange"><strong>'+mpm+"</strong></span>"+nl
-              +'Fluidité : <span id="fl_col" style="color:red"><strong>'+fl+' %</strong></span>'+nl;
+	      //+"Vous avez fait "+txt1+" ("+txt2+" de frappe)."+nl
+	      +"Vous avez fait "+txt2+" de frappe ("+txt1+")."+nl
+	      +'Précision : <span id="precision_col" style="color:#aa1d1d"><strong>'+precision+' %</strong></span> :('+nl
+	      +"Coups par seconde : "+cps+" ("+Math.round(cps*60)+" coups/min.)"+nl
+	      //+'Mots par minute : <span title="Ce chiffre n’est coloré que pour représenter une vitesse à laquelle la frappe devient agréable — 50 mots par minute. Dès que vous atteindrez — ou dépasserez — cette vitesse régulièrement, vous aurez une grande aisance avec le clavier." id="mpm_col" style="color:orange"><strong>'+mpm+"</strong></span>"+nl;
+	      +'Mots par minute : <span id="mpm_col" style="color:#b65e07"><strong>'+mpm+"</strong></span>"+nl
+	      +'Fluidité : <span id="fl_col" style="color:#aa1d1d"><strong>'+fl+' %</strong></span>'+nl;
     //        +nl+'<input style="border:none;background-color:none;width:100%" type="text" onclick="this.select()" value="texte nº '+text_nb+' ; '+mpm+'mpm ; Fluid '+fl+'% ; '+txt1+'"/>'+nl;
-  
+
     //si il y a des erreurs
     if (nb_err != 0)
     {
       result += nl+"Sans erreurs, vous auriez pu atteindre <strong>"+mpm_top+"</strong> mots par minute."+nl    //on donne la vitesse
-                + "Temps perdu en erreurs : "+ lost_time                                                        //le temps perdu 
-                + " soit " + lost_time_percent + "%" +nl;                                                       //et le pourcentage de temps perdu
+		+ "Temps perdu en erreurs : "+ lost_time                                                        //le temps perdu
+		+ " soit " + lost_time_percent + "%" +nl;                                                       //et le pourcentage de temps perdu
     }
   //résultats sur la précision
   //😎
@@ -296,14 +296,14 @@ function aff_session(cps,mpm,precision,fl,mpm_top,lost_time_percent,lost_time,to
       result = result.replace(":(",":)");
 
     result += nl+"Félicitations ! Votre précision est excellente.";                                           //petite phrase d'encouragement
-    result = result.replace('id="precision_col" style="color:red"','id="precision_col" style="color:green"'); //et on passe la précision en vert
+    result = result.replace('id="precision_col" style="color:#aa1d1d"','id="precision_col" style="color:#184c06"'); //et on passe la précision en vert
   }
   else if (precision > 96)
   {
     result = result.replace(":(",":|");
 
     result += nl+"Votre précision est correcte. En étant plus précis, vous gagnerez encore un peu de vitesse.";//petite phrase pour dire que c'est bon (mais sans plus)
-    result = result.replace('id="precision_col" style="color:red"','id="precision_col" style="color:orange"');//et on passe la précision en orange
+    result = result.replace('id="precision_col" style="color:#aa1d1d"','id="precision_col" style="color:#b65e07"');//et on passe la précision en orange
   }
   else
     result += nl+"Essayez de gagner en précision et la vitesse augmentera.";                                  //petite phrase pour dire que ça sert à rien de taper comme un dinque
@@ -315,33 +315,33 @@ function aff_session(cps,mpm,precision,fl,mpm_top,lost_time_percent,lost_time,to
       result += nl+"Vous vous entrainez pour un concours !?";
     else
       result += nl+"Félicitations ! Votre vitesse de frappe est excellente.";                                 //petite phrase d'encouragement
-    
-    result = result.replace('id="mpm_col" style="color:orange"','id="mpm_col" style="color:green"');          //et on passe la vitesse en vert
+
+    result = result.replace('id="mpm_col" style="color:#b65e07"','id="mpm_col" style="color:#184c06"');          //et on passe la vitesse en vert
   }
-  
+
   //résultats sur la fluidité
   if (fl >= 65)
   {
     if (fl > 90)
       result+= nl+"Vous tapez avec beaucoup de régularité ! On pourrait croire que vous êtes un robot !";
-    
-    result = result.replace('id="fl_col" style="color:red"','id="fl_col" style="color:green"');               //mise en vert parce que c'est bien
+
+    result = result.replace('id="fl_col" style="color:#aa1d1d"','id="fl_col" style="color:#184c06"');               //mise en vert parce que c'est bien
   }
-  
+
   else
   {
     result += nl+"Vous n'êtes pas très régulier dans votre frappe.";                                          //sinon petite phrase parce que c'est pas trop bon
   }
- 
+
   result += '<hr><input type="button" class="full_width" onclick="make_ghost_from_session()" value="Créer un fantôme local temporaire"/><br/><input type="button" class="full_width" onclick="this.onclick=make_ghost_from_session_and_save_it()" value="Créer un fantôme et l\'enregistrer sur le serveur"/><div id="result_ghost"></div>'
- 
- 
-  
+
+
+
   //affichage des stats de la session
   document.getElementById("resultats").innerHTML = result;                      //on affiche
-  document.getElementById("resultats").style.backgroundColor = "#f0fff0";       //on colorise
-  document.getElementById("resultats").style.border = "1px solid black";        //on met une bordure
-  
+  document.getElementById("resultats").style.backgroundColor = "#202020";       //on colorise
+  document.getElementById("resultats").style.border = "1px solid #c6c6c6";        //on met une bordure
+
 }
 
 //cette fonction permet de sauvegarder la totalité de la zone de résultats et de la restaurer ensuite si besoin
@@ -376,7 +376,7 @@ function save_opt()
 {
   var id_ = "";                                                                 // le nom temporaire de l'ID de l'input
   var check_ = "";                                                              // l'état temporaire du checkbox de l'input
-  
+
   // url pour la requete
   var url = "save_pref.php?";
 
@@ -385,7 +385,7 @@ function save_opt()
 
   for (var i=0 ; i<list.length ; i++)
   {
-    
+
     id_ = document.getElementById("options").getElementsByTagName("input")[i].id;
     check_ = document.getElementById(id_).checked;
     url += "&"+id_+"="+check_;
@@ -397,7 +397,7 @@ function save_opt()
   document.getElementById("resultats").innerHTML="<strong>"+req_rep+"</strong>";
   document.getElementById("resultats").style.border = "none";
   document.getElementById("resultats").style.backgroundColor = "inherit";
-  setTimeout('val_result("resto")',1500);                                       // restauration du champ de résultats dans 1s        
+  setTimeout('val_result("resto")',1500);                                       // restauration du champ de résultats dans 1s
 
 }
 
@@ -428,7 +428,7 @@ function vidactyl(e)
       esc_key = false;
       val_result("resto");
       if (document.getElementById("txt").readOnly == false)
-        document.getElementById("txt").focus();
+	document.getElementById("txt").focus();
     }
     else
     {
@@ -439,7 +439,7 @@ function vidactyl(e)
       document.getElementById("resultats").style.border = "none";
       document.getElementById("resultats").style.backgroundColor = "inherit";
     }
-  }        
+  }
   else
   {
     if (esc_key == true)
@@ -447,42 +447,42 @@ function vidactyl(e)
       esc_key = false; // dans tous les cas ça évite d'avoir des action alors qu'on est en train de taper du texte
       switch(touche) // le caractère est celui entre []
       {
-        case 48: // [*]
-          esc_key = false;
-          val_result("resto");
-          /*document.getElementById("fw").style.width="100%";
-          document.getElementById("fw").style.height="100%";
-          document.getElementById("fw").style.backgroundImage = "linear-gradient(top, rgba(255,255,255,0.7) 0%, rgba(0,0,0,0) 100%)";*/
-          fireworks_dactylotest();
-        break;
+	case 48: // [*]
+	  esc_key = false;
+	  val_result("resto");
+	  /*document.getElementById("fw").style.width="100%";
+	  document.getElementById("fw").style.height="100%";
+	  document.getElementById("fw").style.backgroundImage = "linear-gradient(top, rgba(255,255,255,0.7) 0%, rgba(0,0,0,0) 100%)";*/
+	  fireworks_dactylotest();
+	break;
 
-        case 78: // [N]
-          new_text("new");
-        break;
+	case 78: // [N]
+	  new_text("new");
+	break;
 
-        case 82: // [R]
-          new_text(); 
-        break;
+	case 82: // [R]
+	  new_text();
+	break;
 
-        case 68: // [D]
-          err_test_txt();
-        break;
+	case 68: // [D]
+	  err_test_txt();
+	break;
 
-        case 67: // [C]
-          alert(GetCookie(prompt("nom du cookie ?")));
-        break;
+	case 67: // [C]
+	  alert(GetCookie(prompt("nom du cookie ?")));
+	break;
 
-        case 86: // [V]
-          var v=prompt("Variable");
-          document.getElementById("resultats").innerHTML = "Variable : "+ v + "<br/>Valeur : " + eval(v);
-        break;
+	case 86: // [V]
+	  var v=prompt("Variable");
+	  document.getElementById("resultats").innerHTML = "Variable : "+ v + "<br/>Valeur : " + eval(v);
+	break;
 
-        default:
-          esc_key = false;
-          val_result("resto");
-          if (document.getElementById("txt").readOnly == false)
-            document.getElementById("txt").focus();        
-        break;
+	default:
+	  esc_key = false;
+	  val_result("resto");
+	  if (document.getElementById("txt").readOnly == false)
+	    document.getElementById("txt").focus();
+	break;
       }
     }
     else
@@ -490,8 +490,7 @@ function vidactyl(e)
       esc_key = false;
       val_result("resto");
       if (document.getElementById("txt").readOnly == false)
-        document.getElementById("txt").focus();
+	document.getElementById("txt").focus();
     }
   }
 }
-	

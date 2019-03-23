@@ -16,7 +16,7 @@ var car_col;                                                                    
 var ghost_is_start = false;                                                     //contre le démarrage intenpestif du fantôme
 var curseur_err_pos = 0;                                                        //position du curseur d'erreur
 var curseur_err_bol = false;                                                    //true si il y a une erreur pour afficher le curseur d'erreur
-var cur_col = "#ffd700";                                                        //couleur du curseur par défaut
+var cur_col = "#9c4d00";                                                        //couleur du curseur par défaut
 var cur_col_err = "#ff7777";                                                    //couleur du curseur en cas d'erreur
 
 //cette fonction compare le texte tapé à « le_texte »
