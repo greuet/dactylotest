@@ -5,7 +5,7 @@ Les textes doivent comporter :
 — les ligatures æ, Æ, œ et Œ,
 — les espaces insécables là ou ils sont nécessaire,
 — les majuscules accentuées.
-*/  
+*/ 
 
 $textes[0]["source"] = "https://fr.wikisource.org/wiki/Traité_de_la_mécanique";
 $textes[0]["txt"] = "L’invention de tous ces engins n’est fondée que sur un seul principe, qui est que la même force qui peut lever un poids, par exemple, de cent livres à la hauteur de deux pieds, en peut aussi lever un de deux cents livres à la hauteur d’un pied, ou un de quatre cents à la hauteur d’un demi-pied, et ainsi des autres, si tant est qu'elle lui soit appliquée. Et ce principe ne peut manquer d’être reçu si on considère que l’effet doit être toujours proportionné à l’action qui est nécessaire pour le produire ; de façon que, s’il est…";
@@ -60,7 +60,7 @@ $textes[12]["txt"] = "La Commune, c’est le parti de ceux qui avaient d’abord
 
 
 $textes[13]["source"] = "https://www.revue-ballast.fr/journaux-nen-lisez-plus/";
-$textes[13]["txt"] = "J’étais dans le cabinet des métaphores, la loupe à l’œil, à regarder dans le mécanisme compliqué du style. Le style c’était une invention de l’âme pour distraire l’esthète que j’étais. Je trouvais du style à tout et préfigurais même une télévision odorante, une télévision à diriger l’économie olfactive. Nous y arrivons, patience !  Le style c’est cette partie du beau qui s’analyse, dans le repos, quand le spectacle flanche. C’est un arrêt dans la culture, pour mieux goûter. Le style c’est cette dame qui descendait l’autre matin…";
+$textes[13]["txt"] = "J’étais dans le cabinet des métaphores, la loupe à l’œil, à regarder dans le mécanisme compliqué du style. Le style c’était une invention de l’âme pour distraire l’esthète que j’étais. Je trouvais du style à tout et préfigurais même une télévision odorante, une télévision à diriger l’économie olfactive. Nous y arrivons, patience ! Le style c’est cette partie du beau qui s’analyse, dans le repos, quand le spectacle flanche. C’est un arrêt dans la culture, pour mieux goûter. Le style c’est cette dame qui descendait l’autre matin…";
 
 
 $textes[14]["source"] = "https://www.revue-ballast.fr/jean-paul-jouary-de-tout-temps-les-democrates-ont-refuse-le-suffrage-universel/";
@@ -72,23 +72,23 @@ $textes[15]["txt"] = "Nous sommes des unités informativores. Nous ingurgitons c
 
 
 $textes[16]["source"] = "http://menace-theoriste.fr/zetetique/";
-$textes[16]["txt"] = "La zététique consiste à questionner les raisons pour lesquelles nous pensons que quelque chose est vrai. Malgré son nom un peu exotique, la zététique n’est rien d’autre que la méthode scientifique (hypothético-déductive) appliquée à toutes sortes de questions qui peuvent nous sembler a priori étrangères à la science.  Pour illustrer cela, prenons un exemple d‘illusion statistique.  Jamais au cours de l’histoire les cancers, Parkinson et Alzheimer n’ont été aussi fréquents. C’est un fait brut. D’aucuns en concluent que notre…";
+$textes[16]["txt"] = "La zététique consiste à questionner les raisons pour lesquelles nous pensons que quelque chose est vrai. Malgré son nom un peu exotique, la zététique n’est rien d’autre que la méthode scientifique (hypothético-déductive) appliquée à toutes sortes de questions qui peuvent nous sembler a priori étrangères à la science. Pour illustrer cela, prenons un exemple d‘illusion statistique. Jamais au cours de l’histoire les cancers, Parkinson et Alzheimer n’ont été aussi fréquents. C’est un fait brut. D’aucuns en concluent que notre environnement…";
 
 
 $textes[17]["source"] = "http://menace-theoriste.fr/le-reflexe-correcteur/";
-$textes[17]["txt"] = "Qu’y a-t-il de plus stérile, dans un échange sur le net, qu’une réponse toute entière concentrée sur l’orthographe de son interlocuteur ?  Vous savez bien, en lisant ce genre d’échange, que celui qui s’adonne à la correction de l’autre au lieu de répondre sur le fond échoue totalement, irrémédiablement à le convaincre. Avoir raison sur la bonne manière d’épeler un mot n’est pas un argument, mais peut devenir une forme d’intimidation par l’orthographe. Volontairement ou involontairement, le correcteur induit chez l’autre le sentiment…";
+$textes[17]["txt"] = "Qu’y a-t-il de plus stérile, dans un échange sur le net, qu’une réponse toute entière concentrée sur l’orthographe de son interlocuteur ? Vous savez bien, en lisant ce genre d’échange, que celui qui s’adonne à la correction de l’autre au lieu de répondre sur le fond échoue totalement, irrémédiablement à le convaincre. Avoir raison sur la bonne manière d’épeler un mot n’est pas un argument, mais peut devenir une forme d’intimidation par l’orthographe. Volontairement ou involontairement, le correcteur induit chez l’autre le sentiment…";
 
 
 $textes[18]["source"] = "http://menace-theoriste.fr/la-violence-epistemique/";
-$textes[18]["txt"] = "Le discours sceptique est irritant. Tel un solvant universel, il s’attaque aux objets de croyances et même aux récipients qui veulent le contenir (les paradigmes). Mesdames et messieurs les zététiques, nous manipulons un produit dangereux, irritant. Il convient donc de ne pas en badigeonner tout le monde autour de nous  à la légère, à la volée, à la hussarde.  Dans le cas des croyances religieuses en particulier, l’adhésion à la croyance s’accompagne d’un « coût ». Il faut respecter certains interdits, suivre des rites, obéir…";
+$textes[18]["txt"] = "Le discours sceptique est irritant. Tel un solvant universel, il s’attaque aux objets de croyances et même aux récipients qui veulent le contenir (les paradigmes). Mesdames et messieurs les zététiques, nous manipulons un produit dangereux, irritant. Il convient donc de ne pas en badigeonner tout le monde autour de nous à la légère, à la volée, à la hussarde. Dans le cas des croyances religieuses en particulier, l’adhésion à la croyance s’accompagne d’un « coût ». Il faut respecter certains interdits, suivre des rites, obéir…";
 
 
 $textes[19]["source"] = "http://menace-theoriste.fr/portrait-robot-de-lignorance/";
-$textes[19]["txt"] = "L’ignorance n’est pas un terrain vierge, c’est une forêt d’idées préconçues, de concepts mal compris, des marais de préjugés, des bosquets de certitudes erronées… Bref, c’est un cauchemar. Un peu d’éducation ne règle malheureusement pas le problème aussi facilement qu’on aurait tendance à le croire.  Recevoir un peu d’éducation revient à élaguer un peu toute cette ignorance pour y planter des connaissances, ce qui ne permet pas d’éliminer toutes les mauvaises herbes ; la personne un peu éduquée reste pleine d’hypothèses, de…";
+$textes[19]["txt"] = "L’ignorance n’est pas un terrain vierge, c’est une forêt d’idées préconçues, de concepts mal compris, des marais de préjugés, des bosquets de certitudes erronées… Bref, c’est un cauchemar. Un peu d’éducation ne règle malheureusement pas le problème aussi facilement qu’on aurait tendance à le croire. Recevoir un peu d’éducation revient à élaguer un peu toute cette ignorance pour y planter des connaissances, ce qui ne permet pas d’éliminer toutes les mauvaises herbes ; la personne un peu éduquée reste pleine d’hypothèses, de croyances,…";
 
 
 $textes[20]["source"] = "https://www.monde-diplomatique.fr/2009/05/LEPAGE/17113";
-$textes[20]["txt"] = "En France, quand on prononce le mot « culture », chacun comprend « art » et plus précisément « art contemporain ». Le mot Culture, avec son singulier et sa majuscule, suscite une religiosité appuyée sur ce nouveau sacré, l’art, essence supérieure incarnée par quelques individus eux-mêmes touchés par une grâce — les « vrais » artistes. La population, elle, est invitée à contempler le mystère.  Entamée dès les années 1960 sous l’égide du ministère des affaires culturelles, la réduction de la culture à l’art représente une catastrophe…";
+$textes[20]["txt"] = "En France, quand on prononce le mot « culture », chacun comprend « art » et plus précisément « art contemporain ». Le mot Culture, avec son singulier et sa majuscule, suscite une religiosité appuyée sur ce nouveau sacré, l’art, essence supérieure incarnée par quelques individus eux-mêmes touchés par une grâce — les « vrais » artistes. La population, elle, est invitée à contempler le mystère. Entamée dès les années 1960 sous l’égide du ministère des affaires culturelles, la réduction de la culture à l’art représente une catastrophe…";
 
 
 $textes[21]["source"] = "http://menace-theoriste.fr/eponymie-et-effet-matthieu/";
@@ -156,7 +156,7 @@ $textes[36]["txt"] = "Une étrange folie possède les classes ouvrières des nat
 
 
 $textes[37]["source"] = "https://wikilivres.org/wiki/Le_Petit_Prince";
-$textes[37]["txt"] = "Les grandes personnes m’ont conseillé de laisser de côté les dessins de serpents boas ouverts ou fermés, et de m’intéresser plutôt à la géographie, à l’histoire, au calcul et à la grammaire. C’est ainsi que j’ai abandonné, à l’âge de six ans, une magnifique carrière de peintre. J’avais été découragé par l’insuccès de mon dessin numéro 1 et de mon dessin numéro 2. Les grandes personnes ne comprennent jamais rien toutes seules, et c’est fatigant, pour les enfants, de toujours leur donner des explications…  J’ai donc dû choisir…";
+$textes[37]["txt"] = "Les grandes personnes m’ont conseillé de laisser de côté les dessins de serpents boas ouverts ou fermés, et de m’intéresser plutôt à la géographie, à l’histoire, au calcul et à la grammaire. C’est ainsi que j’ai abandonné, à l’âge de six ans, une magnifique carrière de peintre. J’avais été découragé par l’insuccès de mon dessin numéro 1 et de mon dessin numéro 2. Les grandes personnes ne comprennent jamais rien toutes seules, et c’est fatigant, pour les enfants, de toujours leur donner des explications… J’ai donc dû choisir…";
 
 
 ?>
