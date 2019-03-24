@@ -40,7 +40,7 @@ $textes[7]["txt"] = "Chaque soir, quand j’ai manqué le dernier train pour Mai
 
 
 $textes[8]["source"] = "https://fr.wikisource.org/wiki/À_se_tordre/Boisflambard";
-$textes[8]["txt"] = "La dernière fois que j’avais rencontré Boisflambard, c’était un matin, de très bonne heure (je ne me souviens plus quelle mouche m’avait piqué de me lever si tôt), au coin du boulevard Saint-michel et de la rue Racine. Mon pauvre Boisflambard, quantum mutatus ! À cette époque-là, le jeune Boisflambard résumait toutes les élégances du Quartier latin. Joli garçon, bien tourné, Maurice Boisflambard s’appliquait à être l’homme le mieux « mis » de toute la rive gauche. Le vernis de ses bottines ne trouvait de concurrence sérieuse…";
+$textes[8]["txt"] = "La dernière fois que j’avais rencontré Boisflambard, c’était un matin, de très bonne heure (je ne me souviens plus quelle mouche m’avait piqué de me lever si tôt), au coin du boulevard Saint-Michel et de la rue Racine. Mon pauvre Boisflambard, quantum mutatus ! À cette époque-là, le jeune Boisflambard résumait toutes les élégances du Quartier latin. Joli garçon, bien tourné, Maurice Boisflambard s’appliquait à être l’homme le mieux « mis » de toute la rive gauche. Le vernis de ses bottines ne trouvait de concurrence sérieuse…";
 
 
 $textes[9]["source"] = "https://www.revue-ballast.fr/quelle-revolution-au-rojava/";
