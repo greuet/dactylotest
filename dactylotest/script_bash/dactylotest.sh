@@ -254,6 +254,8 @@ clean_file () {
         sed "s/nævocarcinome/nævocarcinome/g" |
         sed "s/læliocattleya/læliocattleya/g" |
         sed "s/enterobacteriaceæ/enterobacteriaceæ/g" |
+	# on vire les doubles espaces
+	sed "s/ \+/ /g" |
         # on ne garde qu'environ 1075 caractères sans couper le dernier mot
         sed "s/\(.\{1075\}[^ ]*\).*/\1/"
     printf "…\";\n"
