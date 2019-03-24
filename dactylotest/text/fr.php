@@ -72,7 +72,7 @@ $textes[15]["txt"] = "Nous sommes des unités informativores. Nous ingurgitons c
 
 
 $textes[16]["source"] = "http://menace-theoriste.fr/zetetique/";
-$textes[16]["txt"] = "La zététique consiste à questionner les raisons pour lesquelles nous pensons que quelque chose est vrai. Malgré son nom un peu exotique, la zététique n’est rien d’autre que la méthode scientifique (hypothético-déductive) appliquée à toutes sortes de questions qui peuvent nous sembler a priori étrangères à la science. Pour illustrer cela, prenons un exemple d‘illusion statistique. Jamais au cours de l’histoire les cancers, Parkinson et Alzheimer n’ont été aussi fréquents. C’est un fait brut. D’aucuns en concluent que notre environnement…";
+$textes[16]["txt"] = "La zététique consiste à questionner les raisons pour lesquelles nous pensons que quelque chose est vrai. Malgré son nom un peu exotique, la zététique n’est rien d’autre que la méthode scientifique (hypothético-déductive) appliquée à toutes sortes de questions qui peuvent nous sembler a priori étrangères à la science. Pour illustrer cela, prenons un exemple d’illusion statistique. Jamais au cours de l’histoire les cancers, Parkinson et Alzheimer n’ont été aussi fréquents. C’est un fait brut. D’aucuns en concluent que notre environnement…";
 
 
 $textes[17]["source"] = "http://menace-theoriste.fr/le-reflexe-correcteur/";
