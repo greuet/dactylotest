@@ -155,3 +155,27 @@ img {
     visibility:visible;
     float:right;
 }
+
+.pied {
+    clear:both;
+    padding:5px;
+    border-top:1px #c6c6c6 dotted;
+    text-align:center;
+    width:1200px;
+    margin:auto;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size:12px;
+}
+
+.mybutton a {
+    color: black;
+    background-color:white;
+    padding-left:2px;
+    padding-right:2px;
+}
+
+.mybutton img {
+    height:13px;
+    margin-right:2px;
+    vertical-align:middle;
+}
