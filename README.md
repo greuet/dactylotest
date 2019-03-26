@@ -5,6 +5,8 @@ Un fork du dactylotest de Tazzon (<https://github.com/tazzon/dactylotest>) avec
  * des nouveaux textes qui remplacent ceux du dactylotest original
  * des textes deux fois plus longs en choisissant « français long » comme langue
  * un nouveau style plus sombre
+ * un script bash pour ajouter facilement des nouveaux textes longs
+ * un script bash pour convertir facilement le fichier de textes longs en un fichier de textes courts
 
 On peut tester ici : <https://bakou.ze.cx/dactylotest/>
 
